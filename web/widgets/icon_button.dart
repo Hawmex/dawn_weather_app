@@ -19,10 +19,7 @@ class IconButtonState extends State<IconButton> {
   Widget build(final Context context) {
     return Container(
       [
-        Icon(
-          widget.icon,
-          style: const Style({'pointer-events': 'none', 'display': 'flex'}),
-        )
+        Icon(widget.icon, style: const Style({'display': 'flex'}))
       ],
       onPress: (final event) {
         if (widget.onPress != null) widget.onPress!();

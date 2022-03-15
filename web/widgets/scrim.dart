@@ -11,26 +11,18 @@ class Scrim extends StatelessWidget {
     return Container(
       [],
       onPress: onPress,
-      style: const Style({
+      style: Style({
         'position': 'absolute',
         'top': '0px',
         'left': '0px',
         'width': '100%',
         'height': '100%',
         'background': '#000000',
+        'opacity': isActive ? '0.16' : '0',
+        'visibility': isActive ? 'visible' : 'hidden',
+        'transition':
+            'all ${isActive ? '250ms' : '200ms'} cubic-bezier(0.4, 0.0, 0.2, 1)'
       }),
-      animation: Animation(
-        keyframes: [
-          {'opacity': '0', 'visibility': 'hidden'},
-          {'opacity': '0.16', 'visibility': 'visible'}
-        ],
-        options: {
-          'duration': isActive ? 250 : 200,
-          'easing': 'cubic-bezier(0.4, 0.0, 0.2, 1)',
-          'fill': 'forwards',
-          'direction': isActive ? 'normal' : 'reverse',
-        },
-      ),
     );
   }
 }
