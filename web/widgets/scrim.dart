@@ -2,15 +2,15 @@ import 'package:dawn/dawn.dart';
 
 class Scrim extends StatelessWidget {
   final bool isActive;
-  final EventListener? onPress;
+  final EventListener? onPointerDown;
 
-  const Scrim(this.isActive, {this.onPress});
+  const Scrim(this.isActive, {this.onPointerDown});
 
   @override
   Widget build(final Context context) {
     return Container(
       [],
-      onPress: onPress,
+      onPointerDown: onPointerDown,
       style: Style({
         'position': 'absolute',
         'top': '0px',

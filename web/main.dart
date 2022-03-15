@@ -46,8 +46,8 @@ class App extends StatelessWidget {
       }),
       animation: const Animation(
         keyframes: [
-          {'borderRadius': '256px', 'transform': 'scale(0.64)'},
-          {'borderRadius': '0%', 'transform': 'scale(1)'},
+          {'border-radius': '256px', 'transform': 'scale(0.64)'},
+          {'border-radius': '0%', 'transform': 'scale(1)'},
         ],
         options: {
           'duration': 300,

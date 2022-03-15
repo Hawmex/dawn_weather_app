@@ -29,7 +29,7 @@ class DrawerState extends State<Drawer> {
   Widget build(final Context context) {
     return Container(
       [
-        Scrim(isActive, onPress: (final event) => deactivate()),
+        Scrim(isActive, onPointerDown: (final event) => deactivate()),
         Container(
           [
             Container(
