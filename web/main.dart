@@ -49,7 +49,6 @@ class WeatherAppState extends State<WeatherApp> {
           CurrentWeatherTemperatureAndCondition(weather['current']),
           CurrentWeatherDetails(weather['current']),
         ],
-        const Text('Dawn Weather App (v1.0.0).')
       ],
       style: Style({
         'display': 'flex',
