@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math';
 
 import 'package:dawn/dawn.dart';
 
@@ -22,7 +23,7 @@ class WeatherAppState extends State<WeatherApp> {
   @override
   void initialize() {
     super.initialize();
-    weatherStore.updateWeatherCity('New York City');
+    weatherStore.updateWeatherCity('Tehran');
     weatherSubscription = weatherStore.onUpdate(() => setState(() {}));
   }
 
@@ -35,6 +36,7 @@ class WeatherAppState extends State<WeatherApp> {
   @override
   Widget build(final Context context) {
     final weather = weatherStore.weather;
+    final random = Random();
 
     return Container(
       [
@@ -47,17 +49,23 @@ class WeatherAppState extends State<WeatherApp> {
           CurrentWeatherTemperatureAndCondition(weather['current']),
           CurrentWeatherDetails(weather['current']),
         ],
+        const Text('Dawn Weather App (v1.0.0).')
       ],
-      style: const Style({
+      style: Style({
         'display': 'flex',
         'padding': '32px',
         'gap': '32px',
-        'align-items': 'center',
         'flex-flow': 'column',
+        'justify-content': weather.isEmpty || weather['error'] != null
+            ? 'start'
+            : 'space-between',
         'font-family': 'Jost VF',
         'height': '100vh',
+        'text-align': 'center',
         'overflow': 'hidden auto',
-        'background': '#5ec0e1',
+        'background':
+            'linear-gradient(${random.nextInt(360)}deg, rgb(${127 + random.nextInt(128)}, ${127 + random.nextInt(128)}, ${127 + random.nextInt(128)}) 0%, rgb(${127 + random.nextInt(128)}, ${127 + random.nextInt(128)}, ${127 + random.nextInt(128)}) 100%)',
+        'user-select': 'none',
       }),
     );
   }

@@ -48,6 +48,7 @@ class CurrentWeatherDetails extends StatelessWidget {
         'padding': '16px',
         'background': 'rgba(255, 255, 255, 0.16)',
         'border-radius': '16px',
+        'backdrop-filter': 'blur(16px)',
       }),
     );
   }

@@ -14,11 +14,7 @@ class CurrentWeatherTemperatureAndCondition extends StatelessWidget {
         CurrentWeatherTemperature(currentWeatherDetails['temp_c']),
         Text(
           currentWeatherDetails['condition']['text'],
-          style: const Style({
-            'font-size': '32px',
-            'font-weight': '700',
-            'text-align': 'center',
-          }),
+          style: const Style({'font-size': '32px', 'font-weight': '700'}),
         ),
       ],
       style: const Style({

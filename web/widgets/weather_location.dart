@@ -20,23 +20,26 @@ class WeatherLocation extends StatelessWidget {
           style: const Style({
             'font-size': '24px',
             'font-weight': '700',
+            'width': '100%',
             'outline': 'none',
             'background': 'rgba(255, 255, 255, 0.16)',
-            'padding': '4px',
+            'padding': '8px',
             'border': 'none',
             'text-align': 'center',
             'font-family': 'Jost VF',
             'border-radius': '16px',
+            'backdrop-filter': 'blur(16px)',
           }),
         ),
-        Text(weatherLocation['country'] ?? ''),
+        Text(
+          weatherLocation['country'] ?? '',
+          style: const Style({'padding': '8px'}),
+        ),
       ],
       style: const Style({
         'display': 'flex',
         'flex-flow': 'column',
         'gap': '8px',
-        'padding': '8px',
-        'align-items': 'center',
       }),
     );
   }
