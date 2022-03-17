@@ -1,4 +1,4 @@
-name: dawn_experimental_app
+name: dawn_weather_app
 description: A Dawn app
 publish_to: none
 environment:
