@@ -8,8 +8,8 @@ class CurrentWeatherDetail extends StatelessWidget {
   const CurrentWeatherDetail({
     required this.key,
     required this.value,
-    this.unit = '',
-  });
+    final String? unit,
+  }) : unit = unit ?? '';
 
   @override
   Widget build(final Context context) {
@@ -18,7 +18,10 @@ class CurrentWeatherDetail extends StatelessWidget {
         Text(key),
         Text(
           '$value$unit',
-          style: const Style({'font-size': '20px', 'font-weight': '700'}),
+          style: const Style({
+            'font-size': '20px',
+            'font-variation-settings': '"wght" 450',
+          }),
         ),
       ],
       style: const Style({

@@ -19,7 +19,7 @@ class WeatherLocation extends StatelessWidget {
           searchController,
           style: const Style({
             'font-size': '24px',
-            'font-weight': '700',
+            'font-variation-settings': '"wght" 500',
             'width': '100%',
             'outline': 'none',
             'background': 'rgba(255, 255, 255, 0.16)',

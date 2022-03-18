@@ -11,9 +11,15 @@ class CurrentWeatherTemperature extends StatelessWidget {
       [
         Text(
           '$value',
-          style: const Style({'font-size': '48px', 'font-weight': '700'}),
+          style: const Style({
+            'font-size': '40px',
+            'font-variation-settings': '"wght" 700',
+          }),
         ),
-        const Text('°C', style: Style({'font-weight': '700'})),
+        const Text(
+          '°C',
+          style: Style({'font-variation-settings': '"wght" 700'}),
+        ),
       ],
       style: const Style({'display': 'flex', 'align-items': 'start'}),
     );
