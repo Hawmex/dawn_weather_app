@@ -5,39 +5,42 @@ import 'current_weather_detail.dart';
 class CurrentWeatherDetails extends StatelessWidget {
   final Map<String, dynamic> currentWeatherDetails;
 
-  const CurrentWeatherDetails(this.currentWeatherDetails);
+  const CurrentWeatherDetails(
+    this.currentWeatherDetails, {
+    final String? key,
+  }) : super(key: key);
 
   @override
   Widget build(final Context context) {
     return Container(
       [
         CurrentWeatherDetail(
-          key: 'Real Feel',
+          name: 'Real Feel',
           value: currentWeatherDetails['feelslike_c'],
           unit: '°C',
         ),
         CurrentWeatherDetail(
-          key: 'Humidity',
+          name: 'Humidity',
           value: currentWeatherDetails['humidity'],
           unit: '%',
         ),
         CurrentWeatherDetail(
-          key: 'Wind Speed',
+          name: 'Wind Speed',
           value: currentWeatherDetails['wind_kph'],
           unit: 'km/h',
         ),
         CurrentWeatherDetail(
-          key: 'Visibility',
+          name: 'Visibility',
           value: currentWeatherDetails['vis_km'],
           unit: 'km',
         ),
         CurrentWeatherDetail(
-          key: 'Pressure',
+          name: 'Pressure',
           value: currentWeatherDetails['pressure_mb'],
           unit: 'millibar',
         ),
         CurrentWeatherDetail(
-          key: 'UV Index',
+          name: 'UV Index',
           value: currentWeatherDetails['uv'],
         ),
       ],

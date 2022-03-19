@@ -1,21 +1,23 @@
 import 'package:dawn/dawn.dart';
 
 class CurrentWeatherDetail extends StatelessWidget {
-  final String key;
+  final String name;
   final dynamic value;
   final String unit;
 
   const CurrentWeatherDetail({
-    required this.key,
+    required this.name,
     required this.value,
     final String? unit,
-  }) : unit = unit ?? '';
+    final String? key,
+  })  : unit = unit ?? '',
+        super(key: key);
 
   @override
   Widget build(final Context context) {
     return Container(
       [
-        Text(key),
+        Text(name),
         Text(
           '$value$unit',
           style: const Style({

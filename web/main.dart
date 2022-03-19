@@ -11,7 +11,7 @@ import 'widgets/weather_location.dart';
 void main() => runApp(const WeatherApp());
 
 class WeatherApp extends StatefulWidget {
-  const WeatherApp();
+  const WeatherApp({final String? key}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => WeatherAppState();

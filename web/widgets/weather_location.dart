@@ -1,15 +1,16 @@
+import 'dart:html';
+
 import 'package:dawn/dawn.dart';
 
 import '../weather_store.dart';
 
 class WeatherLocation extends StatelessWidget {
   final Map<String, dynamic> weatherLocation;
+  final UserInputController searchController;
 
-  late final searchController =
-      UserInputController(weatherLocation['name'] ?? '')
-        ..onChange(weatherStore.updateWeatherCity);
-
-  WeatherLocation(this.weatherLocation);
+  WeatherLocation(this.weatherLocation, {final String? key})
+      : searchController = UserInputController(weatherLocation['name'] ?? ''),
+        super(key: key);
 
   @override
   Widget build(final Context context) {
@@ -17,6 +18,8 @@ class WeatherLocation extends StatelessWidget {
       [
         Input(
           searchController,
+          onChange: (final event) => weatherStore
+              .updateWeatherCity((event.target as TextInputElement).value!),
           style: const Style({
             'font-size': '24px',
             'font-variation-settings': '"wght" 500',

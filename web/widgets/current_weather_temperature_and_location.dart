@@ -5,7 +5,10 @@ import 'current_weather_temperature.dart';
 class CurrentWeatherTemperatureAndCondition extends StatelessWidget {
   final Map<String, dynamic> currentWeatherDetails;
 
-  const CurrentWeatherTemperatureAndCondition(this.currentWeatherDetails);
+  const CurrentWeatherTemperatureAndCondition(
+    this.currentWeatherDetails, {
+    final String? key,
+  }) : super(key: key);
 
   @override
   Widget build(final Context context) {
