@@ -62,8 +62,18 @@ class WeatherAppState extends State<WeatherApp> {
         'height': '100vh',
         'text-align': 'center',
         'overflow': 'hidden auto',
-        'background':
-            'linear-gradient(${random.nextInt(360)}deg, rgb(${127 + random.nextInt(128)}, ${127 + random.nextInt(128)}, ${127 + random.nextInt(128)}) 0%, rgb(${127 + random.nextInt(128)}, ${127 + random.nextInt(128)}, ${127 + random.nextInt(128)}) 100%)',
+        'background': '''linear-gradient(
+          ${random.nextInt(360)}deg,
+          rgb(
+            ${127 + random.nextInt(128)},
+            ${127 + random.nextInt(128)},
+            ${127 + random.nextInt(128)}
+          ) 0%,
+          rgb(
+            ${127 + random.nextInt(128)},
+            ${127 + random.nextInt(128)},
+            ${127 + random.nextInt(128)}
+          ) 100%)''',
         'user-select': 'none',
       }),
     );
