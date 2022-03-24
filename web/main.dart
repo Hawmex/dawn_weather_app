@@ -14,7 +14,7 @@ class WeatherApp extends StatefulWidget {
   const WeatherApp({final String? key}) : super(key: key);
 
   @override
-  State<StatefulWidget> createState() => WeatherAppState();
+  State createState() => WeatherAppState();
 }
 
 class WeatherAppState extends State<WeatherApp> {
