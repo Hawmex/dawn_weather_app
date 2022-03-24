@@ -6,18 +6,15 @@ import '../weather_store.dart';
 
 class WeatherLocation extends StatelessWidget {
   final Map<String, dynamic> weatherLocation;
-  final UserInputController searchController;
 
-  WeatherLocation(this.weatherLocation, {final String? key})
-      : searchController = UserInputController(weatherLocation['name'] ?? ''),
-        super(key: key);
+  WeatherLocation(this.weatherLocation, {final String? key}) : super(key: key);
 
   @override
   Widget build(final Context context) {
     return Container(
       [
         Input(
-          searchController,
+          weatherLocation['name'] ?? '',
           onChange: (final event) => weatherStore
               .updateWeatherCity((event.target as TextInputElement).value!),
           style: const Style({

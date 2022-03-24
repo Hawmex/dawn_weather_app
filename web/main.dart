@@ -73,7 +73,7 @@ class WeatherAppState extends State<WeatherApp> {
             ${127 + random.nextInt(128)},
             ${127 + random.nextInt(128)},
             ${127 + random.nextInt(128)}
-          ) 100%,
+          ) 100%
         )''',
         'user-select': 'none',
       }),
