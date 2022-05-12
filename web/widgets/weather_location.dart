@@ -7,7 +7,7 @@ import '../weather_store.dart';
 class WeatherLocation extends StatelessWidget {
   final Map<String, dynamic> weatherLocation;
 
-  WeatherLocation(this.weatherLocation, {final String? key}) : super(key: key);
+  WeatherLocation(this.weatherLocation, {final super.key});
 
   @override
   Widget build(final Context context) {

@@ -9,9 +9,8 @@ class CurrentWeatherDetail extends StatelessWidget {
     required this.name,
     required this.value,
     final String? unit,
-    final String? key,
-  })  : unit = unit ?? '',
-        super(key: key);
+    final super.key,
+  }) : unit = unit ?? '';
 
   @override
   Widget build(final Context context) {

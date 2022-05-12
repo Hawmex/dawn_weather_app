@@ -3,10 +3,7 @@ import 'package:dawn/dawn.dart';
 class CurrentWeatherTemperature extends StatelessWidget {
   final double value;
 
-  const CurrentWeatherTemperature(
-    this.value, {
-    final String? key,
-  }) : super(key: key);
+  const CurrentWeatherTemperature(this.value, {final super.key});
 
   @override
   Widget build(final Context context) {
