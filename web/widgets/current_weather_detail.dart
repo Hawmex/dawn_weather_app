@@ -9,7 +9,7 @@ class CurrentWeatherDetail extends StatelessWidget {
     required this.name,
     required this.value,
     final String? unit,
-    final super.key,
+    super.key,
   }) : unit = unit ?? '';
 
   @override

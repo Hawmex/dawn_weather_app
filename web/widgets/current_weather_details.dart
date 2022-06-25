@@ -5,7 +5,7 @@ import 'current_weather_detail.dart';
 class CurrentWeatherDetails extends StatelessWidget {
   final Map<String, dynamic> currentWeatherDetails;
 
-  const CurrentWeatherDetails(this.currentWeatherDetails, {final super.key});
+  const CurrentWeatherDetails(this.currentWeatherDetails, {super.key});
 
   @override
   Widget build(final Context context) {

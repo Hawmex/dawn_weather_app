@@ -7,7 +7,7 @@ class CurrentWeatherTemperatureAndCondition extends StatelessWidget {
 
   const CurrentWeatherTemperatureAndCondition(
     this.currentWeatherDetails, {
-    final super.key,
+    super.key,
   });
 
   @override
